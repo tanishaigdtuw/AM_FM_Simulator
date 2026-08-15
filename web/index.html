@@ -12,22 +12,40 @@
 
 <body>
 
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
     <header>
-        <h1>AM/FM Signal Simulator</h1>
-        <p>Modulation, Demodulation and Signal Analysis</p>
+
+        <div class="header-content">
+
+            <h1>📡 AM/FM Signal Simulator</h1>
+
+            <p>
+                Explore Modulation, Demodulation,
+                Noise and Signal Analysis
+            </p>
+
+        </div>
+
     </header>
 
 
     <main>
 
-        <!-- Simulation Controls -->
+        <!-- ==========================================
+             SIMULATION PARAMETERS
+        =========================================== -->
+
         <section class="card">
 
-            <h2>Simulation Parameters</h2>
+            <h2>⚙️ Simulation Parameters</h2>
 
             <div class="controls">
 
                 <div class="control">
+
                     <label for="messageFrequency">
                         Message Frequency (Hz)
                     </label>
@@ -36,11 +54,14 @@
                         type="number"
                         id="messageFrequency"
                         value="1000"
+                        min="1"
                     >
+
                 </div>
 
 
                 <div class="control">
+
                     <label for="carrierFrequency">
                         Carrier Frequency (Hz)
                     </label>
@@ -49,11 +70,14 @@
                         type="number"
                         id="carrierFrequency"
                         value="10000"
+                        min="1"
                     >
+
                 </div>
 
 
                 <div class="control">
+
                     <label for="amIndex">
                         AM Modulation Index
                     </label>
@@ -62,12 +86,15 @@
                         type="number"
                         id="amIndex"
                         value="0.5"
+                        min="0"
                         step="0.1"
                     >
+
                 </div>
 
 
                 <div class="control">
+
                     <label for="frequencyDeviation">
                         FM Frequency Deviation (Hz)
                     </label>
@@ -76,13 +103,16 @@
                         type="number"
                         id="frequencyDeviation"
                         value="2000"
+                        min="0"
                     >
+
                 </div>
 
 
                 <div class="control">
+
                     <label for="snr">
-                        SNR (dB)
+                        Signal-to-Noise Ratio (dB)
                     </label>
 
                     <input
@@ -90,6 +120,7 @@
                         id="snr"
                         value="20"
                     >
+
                 </div>
 
             </div>
@@ -97,22 +128,36 @@
         </section>
 
 
-        <!-- Buttons -->
+        <!-- ==========================================
+             SIMULATION BUTTONS
+        =========================================== -->
+
         <section class="card">
 
-            <h2>Simulation</h2>
+            <h2>🚀 Run Simulation</h2>
 
             <div class="buttons">
 
-                <button onclick="runAM()">
+                <button
+                    class="am-button"
+                    onclick="runAM()"
+                >
                     Generate AM
                 </button>
 
-                <button onclick="runFM()">
+
+                <button
+                    class="fm-button"
+                    onclick="runFM()"
+                >
                     Generate FM
                 </button>
 
-                <button onclick="runBoth()">
+
+                <button
+                    class="both-button"
+                    onclick="runBoth()"
+                >
                     Run AM + FM
                 </button>
 
@@ -121,15 +166,19 @@
         </section>
 
 
-        <!-- Results -->
+        <!-- ==========================================
+             RESULTS
+        =========================================== -->
+
         <section class="card">
 
-            <h2>Signal Analysis</h2>
+            <h2>📊 Signal Analysis</h2>
 
             <div id="results">
 
                 <p>
-                    Run a simulation to see the results.
+                    Enter your simulation parameters and
+                    run AM, FM, or both simulations.
                 </p>
 
             </div>
@@ -137,32 +186,249 @@
         </section>
 
 
-        <!-- Graphs -->
-        <section class="card">
+        <!-- ==========================================
+             AM SECTION
+        =========================================== -->
 
-            <h2>Signal Graphs</h2>
+        <section class="card" id="amSection" style="display: none;">
+
+            <h2>〰️ AM Signal Visualization</h2>
+
+ <div class="graph-container">
+
+    <div class="graph-box">
+        <h3>Message Signal</h3>
+        <canvas id="messageGraph"></canvas>
+    </div>
+
+    <div class="graph-box">
+        <h3>AM Modulated Signal</h3>
+        <canvas id="amGraph"></canvas>
+    </div>
+
+    <div class="graph-box">
+        <h3>AM Signal with Noise</h3>
+        <canvas id="amNoiseGraph"></canvas>
+    </div>
+
+    <div class="graph-box">
+        <h3>AM Demodulated Signal</h3>
+        <canvas id="amDemodulatedGraph"></canvas>
+    </div>
+
+    <div class="graph-box">
+        <h3>AM Demodulated Signal with Noise</h3>
+        <canvas id="amNoisyDemodulatedGraph"></canvas>
+    </div>
+
+</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FM SECTION
+        =========================================== -->
+
+        <section class="card" id="fmSection" style="display: none;">
+
+            <h2>〰️ FM Signal Visualization</h2>
 
             <div class="graph-container">
 
-                <canvas id="messageGraph"></canvas>
+    <div class="graph-box">
+        <h3>Message Signal</h3>
+        <canvas id="fmMessageGraph"></canvas>
+    </div>
 
-                <canvas id="amGraph"></canvas>
+    <div class="graph-box">
+        <h3>FM Modulated Signal</h3>
+        <canvas id="fmGraph"></canvas>
+    </div>
 
-                <canvas id="fmGraph"></canvas>
+    <div class="graph-box">
+        <h3>FM Signal with Noise</h3>
+        <canvas id="fmNoiseGraph"></canvas>
+    </div>
 
-                <canvas id="demodulatedGraph"></canvas>
+    <div class="graph-box">
+        <h3>FM Demodulated Signal</h3>
+        <canvas id="fmDemodulatedGraph"></canvas>
+    </div>
+
+    <div class="graph-box">
+        <h3>FM Demodulated Signal with Noise</h3>
+        <canvas id="fmNoisyDemodulatedGraph"></canvas>
+
+                </div>
 
             </div>
+
+        </section>
+
+
+<!-- ==========================================
+     COMPARISON SECTION
+=========================================== -->
+
+<section
+    class="card"
+    id="comparisonSection"
+    style="display: none;"
+>
+
+    <h2>📊 AM vs FM Comparison</h2>
+
+    <div class="graph-container">
+
+        <div class="graph-box">
+
+            <h3>
+                Original vs AM vs FM Demodulated
+            </h3>
+
+            <canvas
+                id="comparisonGraph"
+            ></canvas>
+
+        </div>
+
+
+        <div class="graph-box">
+
+            <h3>
+                Noisy AM vs Noisy FM Recovery
+            </h3>
+
+            <canvas
+                id="fmComparisonGraph"
+            ></canvas>
+
+        </div>
+
+    </div>
+<div class="graph-box">
+
+    <h3>MSE Comparison</h3>
+
+    <canvas id="mseComparisonGraph"></canvas>
+
+</div>
+<div class="graph-box">
+
+    <h3>RMSE Comparison</h3>
+
+    <canvas id="rmseComparisonGraph"></canvas>
+
+</div>
+<div class="graph-box">
+
+    <h3>Correlation Comparison</h3>
+
+    <canvas id="correlationComparisonGraph"></canvas>
+
+</div>
+<div class="graph-box">
+
+    <h3>Noise Impact on Correlation</h3>
+
+    <canvas id="noiseImpactGraph"></canvas>
+
+</div>
+
+<div class="final-result" id="finalResult">
+
+    <h3>🏆 Final Result</h3>
+
+    <p id="finalResultText">
+        Run AM + FM to see the final comparison.
+    </p>
+
+</div>
+
+</section>
+
+        <!-- ==========================================
+             EXPLANATION
+        =========================================== -->
+
+        <section class="card">
+
+            <h2>💡 What Are We Comparing?</h2>
+
+            <div class="explanation">
+
+                <div>
+
+                    <h3>AM — Amplitude Modulation</h3>
+
+                    <p>
+                        In AM, the amplitude of the carrier
+                        changes according to the message signal.
+                        AM generally requires less bandwidth
+                        than the FM configuration used here.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>FM — Frequency Modulation</h3>
+
+                    <p>
+                        In FM, the instantaneous frequency
+                        of the carrier changes according to
+                        the message signal while the carrier
+                        amplitude remains approximately constant.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROJECT SUMMARY
+        =========================================== -->
+
+        <section class="card">
+
+            <h2>🔬 About This Simulator</h2>
+
+            <p class="about-text">
+
+                This project demonstrates the fundamentals of
+                analog communication by generating, modulating,
+                demodulating and analysing AM and FM signals.
+
+                It also explores the effect of noise and compares
+                the recovered signals using performance metrics
+                such as MSE, RMSE and correlation.
+
+            </p>
 
         </section>
 
     </main>
 
 
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
     <footer>
 
         <p>
             AM/FM Signal Simulator
+        </p>
+
+        <p>
+            Analog Communication • Signal Processing • Visualization
         </p>
 
     </footer>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AM/FM Signal Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>AM/FM Signal Simulator</h1>
+        <p>Modulation, Demodulation and Signal Analysis</p>
+    </header>
+
+
+    <main>
+
+        <!-- Simulation Controls -->
+        <section class="card">
+
+            <h2>Simulation Parameters</h2>
+
+            <div class="controls">
+
+                <div class="control">
+                    <label for="messageFrequency">
+                        Message Frequency (Hz)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="messageFrequency"
+                        value="1000"
+                    >
+                </div>
+
+
+                <div class="control">
+                    <label for="carrierFrequency">
+                        Carrier Frequency (Hz)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="carrierFrequency"
+                        value="10000"
+                    >
+                </div>
+
+
+                <div class="control">
+                    <label for="amIndex">
+                        AM Modulation Index
+                    </label>
+
+                    <input
+                        type="number"
+                        id="amIndex"
+                        value="0.5"
+                        step="0.1"
+                    >
+                </div>
+
+
+                <div class="control">
+                    <label for="frequencyDeviation">
+                        FM Frequency Deviation (Hz)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="frequencyDeviation"
+                        value="2000"
+                    >
+                </div>
+
+
+                <div class="control">
+                    <label for="snr">
+                        SNR (dB)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="snr"
+                        value="20"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Buttons -->
+        <section class="card">
+
+            <h2>Simulation</h2>
+
+            <div class="buttons">
+
+                <button onclick="runAM()">
+                    Generate AM
+                </button>
+
+                <button onclick="runFM()">
+                    Generate FM
+                </button>
+
+                <button onclick="runBoth()">
+                    Run AM + FM
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Results -->
+        <section class="card">
+
+            <h2>Signal Analysis</h2>
+
+            <div id="results">
+
+                <p>
+                    Run a simulation to see the results.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Graphs -->
+        <section class="card">
+
+            <h2>Signal Graphs</h2>
+
+            <div class="graph-container">
+
+                <canvas id="messageGraph"></canvas>
+
+                <canvas id="amGraph"></canvas>
+
+                <canvas id="fmGraph"></canvas>
+
+                <canvas id="demodulatedGraph"></canvas>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            AM/FM Signal Simulator
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

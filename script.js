@@ -1653,7 +1653,7 @@ function drawGraph(
     // --------------------------------------
 
     ctx.fillStyle =
-        "#ebcfe2f8";
+        "#efefd7fb";
 
     ctx.fillRect(
         0,
@@ -1963,7 +1963,7 @@ function drawMultiGraph(
     // --------------------------------------
 
     ctx.fillStyle =
-        "#ebcfe2f8";
+        "#efefd7fb";
 
     ctx.fillRect(
         0,
@@ -2317,7 +2317,7 @@ function drawMetricGraph(
     // --------------------------------------
 
     ctx.fillStyle =
-        "#ebcfe2f8";
+        "#efefd7fb";
 
     ctx.fillRect(
         0,

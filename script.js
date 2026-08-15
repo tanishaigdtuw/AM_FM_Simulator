@@ -2389,7 +2389,7 @@ function drawMetricGraph(
     // --------------------------------------
 
     ctx.fillStyle =
-        "#d8b4fe";
+        "#e62222";
 
     ctx.fillRect(
         amX,
@@ -2404,7 +2404,7 @@ function drawMetricGraph(
     // --------------------------------------
 
     ctx.fillStyle =
-        "#86efac";
+        "#6a0773";
 
     ctx.fillRect(
         fmX,

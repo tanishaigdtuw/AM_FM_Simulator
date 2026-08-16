@@ -1,0 +1,823 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    color: #1f2937;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3f0ff,
+            #eef7f1
+        );
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    min-height: 680px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(168, 85, 247, 0.22),
+        transparent 30%
+    ),
+    radial-gradient(
+        circle at 80% 30%,
+        rgba(34, 197, 94, 0.12),
+        transparent 28%
+    ),
+    #263650;
+
+    padding: 80px 20px;
+}
+
+
+/* Decorative circles */
+
+.hero::before,
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.hero::before {
+    width: 400px;
+    height: 400px;
+
+    left: -180px;
+    top: -180px;
+
+    background:
+        rgba(139, 92, 246, 0.10);
+
+    filter: blur(20px);
+}
+
+.hero::after {
+    width: 350px;
+    height: 350px;
+
+    right: -150px;
+    bottom: -150px;
+
+    background:
+        rgba(34, 197, 94, 0.10);
+
+    filter: blur(20px);
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+}
+
+
+/* ==========================================
+   HERO ICON
+========================================== */
+
+.hero-icon {
+    font-size: 62px;
+
+    margin-bottom: 12px;
+
+    filter:
+        drop-shadow(
+            0 0 18px
+            rgba(124, 92, 184, 0.35)
+        );
+
+    animation:
+        pulse 2.5s ease-in-out infinite;
+}
+
+
+/* ==========================================
+   BADGE
+========================================== */
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 17px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(124, 92, 184, 0.09);
+
+    border:
+        1px solid
+        rgba(124, 92, 184, 0.25);
+
+    color: #b09bda;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   HERO TITLE
+========================================== */
+
+.hero h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: clamp(48px, 8vw, 82px);
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff 0%,
+            #e9d5ff 30%,
+            #c4b5fd 55%,
+            #bbf7d0 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 30px
+        rgba(196, 181, 253, 0.25);
+}
+
+.hero h1 span {
+    font-size: 0.58em;
+
+    margin-top: 10px;
+
+    letter-spacing: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #c4b5fd,
+            #93c5fd,
+            #bbf7d0
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 20px
+        rgba(147, 197, 253, 0.22);
+}
+
+
+/* ==========================================
+   TITLE LINE
+========================================== */
+
+.title-line {
+    width: 200px;
+
+    height: 3px;
+
+    margin: 25px auto;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #a855f7,
+            #22c55e,
+            transparent
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(168, 85, 247, 0.25);
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.hero-description {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #f1f5f9;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   LAUNCH BUTTON
+========================================== */
+
+.launch-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 32px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #6d4bc0
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(124, 92, 184, 0.25);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.launch-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(124, 92, 184, 0.32);
+}
+
+
+/* ==========================================
+   INTRO
+========================================== */
+
+.intro {
+    padding: 90px 6%;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(168, 85, 247, 0.12),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(34, 197, 94, 0.10),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #faf8ff,
+            #f5f3ff 50%,
+            #f1faf4
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.section-heading {
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.section-heading > span {
+    color: #7c5bb8;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+
+    font-size:
+        clamp(30px, 5vw, 45px);
+
+    color: #263650;
+
+    line-height: 1.2;
+}
+
+.section-heading p {
+    margin-top: 18px;
+
+    color: #64748b;
+
+    font-size: 17px;
+}
+
+
+/* ==========================================
+   FEATURE CARDS
+========================================== */
+
+.features {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 28px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8f6ff,
+            #f1f7f3
+        );
+
+    border:
+        1px solid #e4e1ee;
+
+    box-shadow:
+        0 8px 25px
+        rgba(71, 85, 105, 0.08);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(71, 85, 105, 0.13);
+}
+
+.feature-card h3 {
+    margin: 16px 0 8px;
+
+    color: #334155;
+
+    font-size: 20px;
+}
+
+.feature-card p {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   FEATURE ICONS
+========================================== */
+
+.feature-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.feature-icon.purple {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.feature-icon.green {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.feature-icon.blue {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.feature-icon.pink {
+    background: #fce7f3;
+    color: #db2777;
+}
+
+
+/* ==========================================
+   PROCESS
+========================================== */
+
+.process {
+    padding: 90px 6%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f4fdf7
+        );
+}
+
+.steps {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.step {
+    text-align: center;
+
+    padding: 30px;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a78bfa,
+            #7c5bb8
+        );
+
+    color: white;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 8px 18px
+        rgba(124, 92, 184, 0.20);
+}
+
+.step h3 {
+    margin-top: 18px;
+
+    color: #334155;
+}
+
+.step p {
+    margin-top: 8px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   CTA
+========================================== */
+
+.cta {
+    padding: 90px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(168, 85, 247, 0.15),
+            transparent 40%
+        ),
+        #263650;
+
+    color: white;
+}
+
+.cta-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.cta h2 {
+    font-size:
+        clamp(30px, 5vw, 45px);
+
+    color: #f8fafc;
+}
+
+.cta p {
+    margin-top: 10px;
+
+    color: #cbd5e1;
+
+    font-size: 16px;
+}
+
+.cta .launch-button {
+    margin-top: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a855f7,
+            #7c5bb8
+        );
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    padding: 28px 20px;
+
+    text-align: center;
+
+    background: #17233a;
+
+    color: #94a3b8;
+}
+
+footer p {
+    color: #e2e8f0;
+
+    font-weight: 700;
+
+    margin-bottom: 4px;
+}
+
+footer span {
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+
+        filter:
+            drop-shadow(
+                0 0 12px
+                rgba(124, 92, 184, 0.25)
+            );
+    }
+
+    50% {
+        transform: scale(1.08);
+
+        filter:
+            drop-shadow(
+                0 0 22px
+                rgba(124, 92, 184, 0.50)
+            );
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .features {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 600px;
+
+        padding: 60px 20px;
+    }
+
+    .hero-icon {
+        font-size: 48px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h1 span {
+        font-size: 0.58em;
+
+        letter-spacing: 1px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .intro,
+    .process {
+        padding: 65px 6%;
+    }
+}
+/* ==========================================
+   DEVELOPER / PROJECT DETAILS
+========================================== */
+
+.developer-section {
+    padding: 45px 20px 55px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f3ff,
+            #eef2ff,
+            #ecfdf5
+        );
+}
+
+.developer-card {
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 28px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        );
+
+    border-radius: 18px;
+
+    border:
+        1px solid rgba(148, 163, 184, 0.25);
+
+    box-shadow:
+        0 10px 30px
+        rgba(30, 41, 59, 0.12);
+}
+
+.developer-label {
+    margin-bottom: 8px;
+
+    color: #256c82;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.developer-card h2 {
+    margin-bottom: 5px;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            90deg,
+            #bd36b2,
+            #d693e2,
+            #bd36b2
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.developer-card p {
+    color: #64748b;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    margin: 0;
+}
+.feature-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}

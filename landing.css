@@ -48,17 +48,17 @@ body {
     overflow: hidden;
 
     background:
-    radial-gradient(
-        circle at 20% 20%,
-        rgba(168, 85, 247, 0.22),
-        transparent 30%
-    ),
-    radial-gradient(
-        circle at 80% 30%,
-        rgba(34, 197, 94, 0.12),
-        transparent 28%
-    ),
-    #263650;
+        linear-gradient(
+            rgba(8, 18, 35, 0.70),
+            rgba(8, 18, 35, 0.75)
+        ),
+        url("background.jpg.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
 
     padding: 80px 20px;
 }
@@ -79,9 +79,11 @@ body {
 
 .hero::before {
     width: 400px;
+
     height: 400px;
 
     left: -180px;
+
     top: -180px;
 
     background:
@@ -92,9 +94,11 @@ body {
 
 .hero::after {
     width: 350px;
+
     height: 350px;
 
     right: -150px;
+
     bottom: -150px;
 
     background:
@@ -169,7 +173,9 @@ body {
 
 .hero h1 {
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 
     gap: 4px;
@@ -192,6 +198,7 @@ body {
         );
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
     -webkit-text-fill-color: transparent;
@@ -217,6 +224,7 @@ body {
         );
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
     -webkit-text-fill-color: transparent;
@@ -325,29 +333,18 @@ body {
 .intro {
     padding: 90px 6%;
 
-    background:
-        radial-gradient(
-            circle at 10% 20%,
-            rgba(168, 85, 247, 0.12),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 90% 70%,
-            rgba(34, 197, 94, 0.10),
-            transparent 28%
-        ),
-        linear-gradient(
-            135deg,
-            #faf8ff,
-            #f5f3ff 50%,
-            #f1faf4
-        );
-
     position: relative;
 
     overflow: hidden;
-}
 
+    background: transparent;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
 .section-heading {
     max-width: 750px;
 
@@ -425,6 +422,12 @@ body {
     transition:
         transform 0.2s,
         box-shadow 0.2s;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    cursor: pointer;
 }
 
 .feature-card:hover {
@@ -456,6 +459,7 @@ body {
 
 .feature-icon {
     width: 52px;
+
     height: 52px;
 
     display: flex;
@@ -473,21 +477,25 @@ body {
 
 .feature-icon.purple {
     background: #ede9fe;
+
     color: #7c3aed;
 }
 
 .feature-icon.green {
     background: #dcfce7;
+
     color: #16a34a;
 }
 
 .feature-icon.blue {
     background: #dbeafe;
+
     color: #2563eb;
 }
 
 .feature-icon.pink {
     background: #fce7f3;
+
     color: #db2777;
 }
 
@@ -499,12 +507,13 @@ body {
 .process {
     padding: 90px 6%;
 
-    background:
-        linear-gradient(
-            135deg,
-            #eef2ff,
-            #f4fdf7
-        );
+    background: transparent;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
 }
 
 .steps {
@@ -528,6 +537,7 @@ body {
 
 .step-number {
     width: 60px;
+
     height: 60px;
 
     display: flex;
@@ -581,12 +591,17 @@ body {
     text-align: center;
 
     background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(168, 85, 247, 0.15),
-            transparent 40%
+        linear-gradient(
+            rgba(8, 18, 35, 0.72),
+            rgba(8, 18, 35, 0.78)
         ),
-        #263650;
+        url("cta-background.jpg.avif");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
 
     color: white;
 }
@@ -732,6 +747,8 @@ footer span {
         padding: 65px 6%;
     }
 }
+
+
 /* ==========================================
    DEVELOPER / PROJECT DETAILS
 ========================================== */
@@ -767,7 +784,8 @@ footer span {
     border-radius: 18px;
 
     border:
-        1px solid rgba(148, 163, 184, 0.25);
+        1px solid
+        rgba(148, 163, 184, 0.25);
 
     box-shadow:
         0 10px 30px
@@ -802,6 +820,7 @@ footer span {
         );
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
     -webkit-text-fill-color: transparent;
@@ -816,8 +835,17 @@ footer span {
 
     margin: 0;
 }
-.feature-card {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+.explore-process-background {
+    background:
+        linear-gradient(
+            rgba(238, 242, 255, 0.70),
+            rgba(236, 253, 245, 0.70)
+        ),
+        url("background_image.avif");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
 }

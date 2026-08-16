@@ -836,16 +836,5 @@ footer span {
     margin: 0;
 }
 .explore-process-background {
-    background:
-        linear-gradient(
-            rgba(238, 242, 255, 0.70),
-            rgba(236, 253, 245, 0.70)
-        ),
-        url("background_image.avif");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-repeat: no-repeat;
+    background: #f3efff;
 }

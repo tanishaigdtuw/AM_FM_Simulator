@@ -193,7 +193,7 @@ button:active {
 }
 
 .am-button:hover {
-    background: #8aa0db;
+    background: #7a7a7a;
 }
 
 
@@ -204,7 +204,7 @@ button:active {
 }
 
 .fm-button:hover {
-    background: #6d28d9;
+    background: #7a7a7a;
 }
 
 
@@ -215,7 +215,7 @@ button:active {
 }
 
 .both-button:hover {
-    background: #047857;
+    background: #7a7a7a;
 }
 
 
@@ -576,5 +576,5 @@ footer p:first-child {
 }
 
 .reset-button:hover {
-    background: #7565a3;
+    background: #7a7a7a;
 }

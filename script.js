@@ -2457,17 +2457,17 @@ function drawMetricGraph(
 
 
     ctx.fillText(
-        "AM",
-        amX + barWidth / 2,
-        chartBottom + 25
-    );
+    "AM",
+    amX + barWidth / 2,
+    chartBottom + 38
+);
 
 
     ctx.fillText(
-        "FM",
-        fmX + barWidth / 2,
-        chartBottom + 25
-    );
+    "FM",
+    fmX + barWidth / 2,
+    chartBottom + 38
+);
 
 
     ctx.textAlign =
@@ -2488,4 +2488,31 @@ function resetParameters() {
     document.getElementById("frequencyDeviation").value = 2000;
 
     document.getElementById("snr").value = 20;
+}
+function clearAll() {
+
+    // Clear all input fields
+    document.querySelectorAll("input").forEach(input => {
+        input.value = "";
+    });
+
+    // Clear results
+    const results = document.getElementById("results");
+
+    if (results) {
+        results.innerHTML = "";
+    }
+
+    // Clear all canvas graphs
+    document.querySelectorAll("canvas").forEach(canvas => {
+
+        const ctx = canvas.getContext("2d");
+
+        ctx.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+    });
 }

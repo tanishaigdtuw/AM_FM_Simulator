@@ -2473,3 +2473,19 @@ function drawMetricGraph(
     ctx.textAlign =
         "left";
 }
+// ==========================================
+// RESET PARAMETERS TO DEFAULT VALUES
+// ==========================================
+
+function resetParameters() {
+
+    document.getElementById("messageFrequency").value = 1000;
+
+    document.getElementById("carrierFrequency").value = 10000;
+
+    document.getElementById("amIndex").value = 0.5;
+
+    document.getElementById("frequencyDeviation").value = 2000;
+
+    document.getElementById("snr").value = 20;
+}

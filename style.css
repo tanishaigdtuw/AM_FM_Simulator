@@ -132,7 +132,7 @@ main {
 }
 
 .control input:focus {
-    border-color: #2563eb;
+    border-color: #1875ab;
 
     box-shadow:
         0 0 0 3px
@@ -189,18 +189,18 @@ button:active {
 /* AM button */
 
 .am-button {
-    background: #2563eb;
+    background: #c029b9;
 }
 
 .am-button:hover {
-    background: #1d4ed8;
+    background: #8aa0db;
 }
 
 
 /* FM button */
 
 .fm-button {
-    background: #7c3aed;
+    background: #905190;
 }
 
 .fm-button:hover {
@@ -211,7 +211,7 @@ button:active {
 /* Both button */
 
 .both-button {
-    background: #059669;
+    background: #f02d2d;
 }
 
 .both-button:hover {
@@ -566,4 +566,15 @@ footer p:first-child {
 
 .final-result.am-winner h3 {
     color: #7e22ce;
+}
+/* ==========================================
+   RESET BUTTON
+========================================== */
+
+.reset-button {
+    background: #19a61e;
+}
+
+.reset-button:hover {
+    background: #7565a3;
 }
